@@ -1,5 +1,5 @@
 export const endpointFetch = ( environment ) => {
 
-    return environment === "staging" ? "https://staging.api.bellmanagency.blupp.co" : "https://api.bellmanagency.blupp.co"
+    return environment === "staging" ? "https://staging.api.synetec.blupp.co" : "https://api.synetec.blupp.co"
 
 }
