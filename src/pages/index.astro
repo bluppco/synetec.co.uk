@@ -1,4 +1,19 @@
 ---
+// RUNTIME
+const runtime = Astro.locals.runtime
+const {
+
+    CDN,
+    ENDPOINT,
+    ENVIRONMENT,
+    PROJECT
+
+} = runtime.env
+const data = await homeAPI( ENVIRONMENT, ENDPOINT )
+
+import { homeAPI } from "@/api/home/index"
+
+const { home_data, services, meta, case_studies } = data
 
 // IMPORT LAYOUT COMPONENTS
 import Layout from "@/layouts/Layout.astro"
