@@ -47,11 +47,16 @@ module.exports = {
 			},
 			colors: {
 
-				synetec_white: "#fdfdff",
-				synetec_light_gray: "#d2d6de",
-				synetec_dark_orange: "#c33f08",
-				synetec_orange: "#e74e0f",
-				synetec_grayish_blue: "#667085"
+				"synetec_black": "#101828",
+				"synetec_dark_orange": "#c33f08",
+				"synetec_gray": "#f5f5f5",
+				"synetec_grayish_blue": "#667085",
+				"synetec_light_gray": "#d2d6de",
+				"synetec_orange": "#e74e0f",
+				"synetec_white": "#fdfdff",
+				"synetec_dark_blue": "#0d1326",
+				"synetec_zinc": "#707070",
+				"synetec_blue": "#19295c"
 
 			},
 			fontFamily: {

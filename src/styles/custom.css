@@ -1,0 +1,5 @@
+.markdown p {
+
+    @apply py-2 text-synetec_black text-xl font-light !important
+
+}

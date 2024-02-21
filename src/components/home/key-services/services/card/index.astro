@@ -1,0 +1,40 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import PictureContain from "@/atoms/picture/contain/index.astro"
+import ArrowButton from "@/atoms/buttons/arrow/index.astro"
+import Link from "@/atoms/links/index.astro"
+import ParagraphRegularZinc from "@/atoms/paragraphs/regular/zinc/index.astro"
+
+// ASTRO PROPS
+const {
+
+    button_link,
+    button_title,
+    CDN,
+    description,
+    PROJECT,
+    source,
+    title
+
+} = Astro.props
+
+---
+<div class="space-y-6 p-8 bg-white hover:bg-[#eaeaea] shadow-sm hover:shadow-none border border-[#d3d3d3] border-t-8 border-t-synetec_blue transition-all duration-200">
+    <div class="bg-zinc-200 size-20">
+        <PictureContain
+            alternative_text={ title }
+            CDN={ CDN }
+            image_width="160"
+            PROJECT={ PROJECT }
+            source={ source }
+        />
+    </div>
+    <h4 class="text-3xl font-semibold font-poppins text-synetec_dark_blue leading-snug">{ title }</h4>
+    <ParagraphRegularZinc>{ description }</ParagraphRegularZinc>
+    <div class="pt-4">
+        <Link href={ button_link } aria_label={ button_title }>
+            <ArrowButton>{ button_title }</ArrowButton>
+        </Link>
+    </div>
+</div>
