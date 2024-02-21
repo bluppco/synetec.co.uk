@@ -3,6 +3,10 @@
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
+// IMPORTS ASTRO COMPONENTS
+import TrustedByCompanies from "@/components/home/hero/trusted-by-companies/index.astro"
+import AwardWinning from "@/components/home/hero/award-winning/index.astro"
+
 // IMPORTS ASTRO ATOMS
 import HeadingOne from "@/atoms/headings/one/white/index.astro"
 import Link from "@/atoms/links/index.astro"
@@ -15,17 +19,18 @@ import SecondaryButton from "@/atoms/buttons/secondary/index.astro"
 // ASTRO PROPS
 const {
 
+    award_winning,
     CDN,
     data,
     PROJECT,
-
+    trusted_companies
 
 } = Astro.props
 
 ---
-<section class="bg-blue-900 py-12">
+<section class="bg-blue-900">
     <Container>
-        <section class="grid grid-cols-3 gap-14">
+        <section class="grid grid-cols-3 gap-14 py-12">
             <section class="col-span-2 flex flex-col gap-4 justify-center">
                 <HeadingOne>{ data.title }</HeadingOne>
                 <ParagraphXl>{ data.description }</ParagraphXl>
@@ -59,4 +64,16 @@ const {
             </section>
         </section>
     </Container>
+    <section class="grid grid-cols-2 gap-40 py-8 bg-white/10 backdrop-blur-sm md:px-6 2xl:px-12">
+        <TrustedByCompanies
+            CDN={ CDN }
+            data={ trusted_companies }
+            PROJECT={ PROJECT }
+        />
+        <AwardWinning
+            CDN={ CDN }
+            data={ award_winning }
+            PROJECT={ PROJECT }
+        />
+    </section>
 </section>

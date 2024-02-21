@@ -1,0 +1,43 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import HeadingSix from "@/atoms/headings/six/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
+
+// SORTS THE IMAGES ARRAY
+const images = data.images.sort( ( a, b ) => a.order - b.order )
+
+---
+<section class="space-y-6">
+    <HeadingSix>{ data.title }</HeadingSix>
+    <div class="flex items-center gap-4">
+        {
+
+            images.map( ( value ) => {
+
+                return(
+                    <div class="h-12 w-fit">
+                        <PictureContain
+                            alternative_text={ data.title }
+                            CDN={ CDN }
+                            image_width="200"
+                            PROJECT={ PROJECT }
+                            source={ value.file }
+                        />
+                    </div>
+                )
+
+            })
+
+        }
+    </div>
+</section>

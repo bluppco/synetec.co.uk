@@ -50,7 +50,8 @@ module.exports = {
 				synetec_white: "#fdfdff",
 				synetec_light_gray: "#d2d6de",
 				synetec_dark_orange: "#c33f08",
-				synetec_orange: "#e74e0f"
+				synetec_orange: "#e74e0f",
+				synetec_grayish_blue: "#667085"
 
 			},
 			fontFamily: {
