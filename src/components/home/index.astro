@@ -1,11 +1,27 @@
 ---
 
-// IMPORTS ASTRO LAYOUTS
-import Container from "@/layouts/Container.astro"
+// IMPORT COMMON COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+import HeaderBanner from "@/components/common/header-banner/index.astro"
+import Hero from "@/components/home/hero/index.astro"
+
+const {
+
+    case_studies,
+    CDN,
+    home_data,
+    PROJECT,
+    services
+
+} = Astro.props
 
 ---
-<section class="bg-zinc-200 py-10">
-    <Container>
-        <p class="text-black">I am home</p>
-    </Container>
-</header>
+<HeaderBanner />
+<Header />
+<Hero
+    CDN={ CDN }
+    data={ home_data.hero }
+    PROJECT={ PROJECT }
+/>
+<Footer />

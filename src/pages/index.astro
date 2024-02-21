@@ -16,24 +16,22 @@ import { homeAPI } from "@/api/home/index"
 const { home_data, services, meta, case_studies } = data
 
 // IMPORT LAYOUT COMPONENTS
-import Layout from "@/layouts/Layout.astro"
-
-// IMPORT COMMON COMPONENTS
-import Footer from "@/components/common/footer/index.astro"
-import Header from "@/components/common/header/index.astro"
-import HeaderBanner from "@/components/common/header-banner/index.astro"
+import Layout from "@/layouts/layout/index.astro"
 
 // HOME COMPONENTS
 import Home from "@/components/home/index.astro"
 
 ---
 <Layout
-	description=""
-	image=""
-	title=""
+	description={ meta.description }
+	image={ meta.cover }
+	title={ meta.title }
 >
-	<HeaderBanner/>
-	<Header/>
-	<Home/>
-	<Footer/>
+	<Home
+		case_studies={ case_studies }
+		CDN={ CDN }
+		home_data={ home_data }
+		PROJECT={ PROJECT }
+		services={ services }
+	/>
 </Layout>
