@@ -56,7 +56,8 @@ module.exports = {
 				"synetec_white": "#fdfdff",
 				"synetec_dark_blue": "#0d1326",
 				"synetec_zinc": "#707070",
-				"synetec_blue": "#19295c"
+				"synetec_blue": "#19295c",
+				"synetec_off_white": "#f7f8f6"
 
 			},
 			fontFamily: {

@@ -1,0 +1,46 @@
+---
+
+// IMPORTS ASTRO COMPONENTS
+import CallDescription from "@/components/home/contact/book-a-call/call-description/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingThree from "@/atoms/headings/three/index.astro"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    PROJECT
+
+} = Astro.props
+
+const title = "Book a conversation and in 30-minutes we'll"
+
+const data = Array(3).fill({
+
+    text: "Give you Clarity so you know what good can look like",
+    source: ""
+
+})
+---
+<section class="space-y-12">
+    <HeadingThree>{ title }</HeadingThree>
+    <div class="space-y-10">
+        {
+
+            data.map( ( value ) => {
+
+                return(
+                    <CallDescription
+                        CDN={ CDN }
+                        PROJECT={ PROJECT }
+                        source={ value.source }
+                        text={ value.text }
+                    />
+                )
+
+            })
+
+        }
+    </div>
+</section>

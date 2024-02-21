@@ -1,0 +1,29 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ParagraphLarge from "@/atoms/paragraphs/large/dark-blue/index.astro"
+import PictureContain from "@/atoms/picture/contain/index.astro"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    PROJECT,
+    source,
+    text,
+
+} = Astro.props
+
+---
+<div class="flex gap-4">
+    <div class="bg-zinc-200 size-10">
+        <PictureContain
+            alternative_text=""
+            CDN={ CDN }
+            image_width="440"
+            PROJECT={ PROJECT }
+            source={ source }
+        />
+    </div>
+    <ParagraphLarge>{ text }</ParagraphLarge>
+</div>

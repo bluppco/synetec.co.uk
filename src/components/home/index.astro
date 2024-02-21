@@ -6,6 +6,7 @@ import Header from "@/components/common/header/index.astro"
 import HeaderBanner from "@/components/common/header-banner/index.astro"
 import Hero from "@/components/home/hero/index.astro"
 import KeyServices from "@/components/home/key-services/index.astro"
+import ContactUs from "@/components/home/contact/index.astro"
 
 const {
 
@@ -32,5 +33,9 @@ const {
     data={ home_data.key_services }
     PROJECT={ PROJECT }
     services={ services }
+/>
+<ContactUs
+    CDN={ CDN }
+    PROJECT={ PROJECT }
 />
 <Footer />

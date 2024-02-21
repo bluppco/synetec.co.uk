@@ -1,0 +1,18 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ParagraphSmallDarkBlue from "@/atoms/paragraphs/small/dark-blue/index.astro"
+
+const data = {
+
+    title: "Speak to us about your bespoke software development goals",
+    button_text: "Contact Us",
+    description: "By submitting this form, you agree to Synetec's Privacy Policy."
+
+}
+
+---
+<section>
+    <h3 class="text-synetec_dark_blue text-2xl font-poppins font-semibold">{ data.title }</h3>
+    <ParagraphSmallDarkBlue>{ data.description }</ParagraphSmallDarkBlue>
+</section>

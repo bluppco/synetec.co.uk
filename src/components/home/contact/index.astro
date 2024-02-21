@@ -1,0 +1,26 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import BookACall from "@/components/home/contact/book-a-call/index.astro"
+import ContactUs from "@/components/home/contact/contact-us/index.astro"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    PROJECT
+
+} = Astro.props
+
+---
+<section class="py-40 md:px-40 2xl:px-60">
+    <Container>
+        <section class="grid grid-cols-2 gap-10">
+            <BookACall />
+            <ContactUs />
+        </section>
+    </Container>
+</section>
