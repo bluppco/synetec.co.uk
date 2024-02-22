@@ -1,0 +1,35 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+
+// ASTRO PROPS
+const {
+
+    footer_column_two,
+    heading
+
+} = Astro.props
+
+---
+<section class="grid grid-cols-5 gap-4">
+    {
+
+        footer_column_two.map( ( value, index ) => {
+
+            return(
+                <div class={` ${ index === 0 ? "col-span-2" : "" } bg-[#fdfdff05] rounded-md p-6 flex flex-col gap-4 justify-center items-center`}>
+                    <div class="h-24 w-fit">
+                        <PictureInternalContain
+                            alternative_text={ value.data.image_alternative_text }
+                            source={ value.data.image_source }
+                        />
+                    </div>
+                    <p class="text-center text-synetec_white capitalize font-poppins font-light text-xs">{ value.data.title }</p>
+                </div>
+            )
+
+        })
+
+    }
+</section>
