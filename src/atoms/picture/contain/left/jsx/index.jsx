@@ -1,4 +1,4 @@
-const PictureContain = ( props ) => {
+const PictureContainLeft = ( props ) => {
 
     const {
 
@@ -17,11 +17,11 @@ const PictureContain = ( props ) => {
             <img
                 src={ CDN + PROJECT + "/" +  source + "?quality=80" + "&width=" + image_width }
                 alt={ alternative_text }
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain object-left"
             />
         </picture>
     )
 
 }
 
-export default PictureContain
+export default PictureContainLeft

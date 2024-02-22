@@ -1,20 +1,21 @@
 ---
 
-// IMPORT COMMON COMPONENTS
+// IMPORTS COMPONENTS
+import CaseStudies from "@/components/home/case-studies/index.astro"
+import ContactUs from "@/components/home/contact/index.astro"
 import Footer from "@/components/common/footer/index.astro"
 import Header from "@/components/common/header/index.astro"
 import HeaderBanner from "@/components/common/header-banner/index.astro"
 import Hero from "@/components/home/hero/index.astro"
 import KeyServices from "@/components/home/key-services/index.astro"
-import ContactUs from "@/components/home/contact/index.astro"
 
 const {
 
-    case_studies,
     CDN,
     home_data,
     PROJECT,
-    services
+    services,
+    case_studies
 
 } = Astro.props
 
@@ -33,6 +34,12 @@ const {
     data={ home_data.key_services }
     PROJECT={ PROJECT }
     services={ services }
+/>
+<CaseStudies
+    case_studies={ case_studies }
+    CDN={ CDN }
+    data={ home_data.case_studies }
+    PROJECT={ PROJECT }
 />
 <ContactUs
     CDN={ CDN }

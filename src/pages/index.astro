@@ -13,7 +13,7 @@ const data = await homeAPI( ENVIRONMENT, ENDPOINT )
 
 import { homeAPI } from "@/api/home/index"
 
-const { home_data, services, meta, case_studies } = data
+const { home_data, services, meta, studies } = data
 
 // IMPORT LAYOUT COMPONENTS
 import Layout from "@/layouts/layout/index.astro"
@@ -28,7 +28,7 @@ import Home from "@/components/home/index.astro"
 	title={ meta.title }
 >
 	<Home
-		case_studies={ case_studies }
+		case_studies={ studies }
 		CDN={ CDN }
 		home_data={ home_data }
 		PROJECT={ PROJECT }
