@@ -15,7 +15,7 @@ const VideoModal = ( props ) => {
             onRequestClose={ close }
             style={ modalStyling }
         >
-            <div className="w-full md:w-[970px] h-full md:h-[630px] md:p-4 relative">
+            <div className="w-full md:w-[970px] h-full md:h-[630px] md:p-4 relative z-[100]">
                 <div className="absolute -top-[18px] -right-[18px] md:-top-2 md:-right-3">
                     <div className="hover:bg-zinc-200 p-1 cursor-pointer" onClick={ () => close() }>
                         <div className="w-3 md:w-4 aspect-square">

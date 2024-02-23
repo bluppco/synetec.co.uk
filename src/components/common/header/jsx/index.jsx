@@ -35,7 +35,7 @@ const Header = ( props ) => {
 
     return(
         <>
-            <header className={` ${ isScrolled ? "shadow-2xl border-b border-gray-50" : "" } h-24 hidden md:flex items-center fixed z-[100] w-full bg-synetec_black top-10 `}>
+            <header className={` ${ isScrolled ? "shadow-2xl border-b border-gray-50" : "" } h-24 hidden md:flex items-center fixed z-50 w-full bg-synetec_black top-10 `}>
                 <nav className="flex items-center justify-between h-full w-full container max-w-8xl mx-auto">
                     <section className="flex items-center gap-12">
                         <Link href="/" aria-label="logo">
