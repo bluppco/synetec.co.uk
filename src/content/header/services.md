@@ -1,7 +1,9 @@
 ---
 title: Services
-button_text: See all Services
-button_link: services
+services_button_text: See all Services
+services_button_link: services
+technologies_button_text: See all Technologies
+technologies_button_link: technologies
 order: 1
 has_dropdown: true
 items: [
@@ -68,5 +70,38 @@ items: [
         src: software-risk-review.svg,
         title: Software Risk Review
     }
+]
+technologies: [
+    {
+        link: net,
+        order: 1,
+        slug: net,
+        title: .Net
+    },
+    {
+        link: sql,
+        order: 2,
+        slug: sql,
+        title: SQL
+    },
+    {
+        link: angular,
+        order: 3,
+        slug: angular,
+        title: Angular
+    },
+    {
+        link: cloud-aws,
+        order: 4,
+        slug: cloud-aws,
+        title: Cloud - AWS
+    },
+    {
+        link: cloud-azure,
+        order: 5,
+        slug: cloud-azure,
+        title: Cloud - Azure
+    },
+
 ]
 ---

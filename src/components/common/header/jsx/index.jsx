@@ -99,15 +99,43 @@ const Header = ( props ) => {
                                                                         })
 
                                                                     }
+                                                                    <div />
+                                                                    <div />
                                                                     <div className="pt-4">
-                                                                        <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.button_text }</p>
+                                                                        <Link href={ item.data.services_button_link } aria_label={ item.data.services_button_text }>
+                                                                            <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.services_button_text }</p>
+                                                                        </Link>
+                                                                    </div>
+                                                                    {
+
+                                                                        item.data.technologies.map( ( sub_item, sub_item_index ) => {
+
+                                                                            return(
+                                                                                <div key={ sub_item_index } className="pt-6">
+                                                                                    <Link href={ "/technology/" + sub_item.slug } aria_label={ "explore" + sub_item.title }>
+                                                                                        <div className="flex items-center gap-4">
+                                                                                            <div>
+                                                                                                <p className="font-poppins font-semibold text-[#00104b] text-lg">{ sub_item.title }</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </Link>
+                                                                                </div>
+                                                                            )
+
+                                                                        })
+
+                                                                    }
+                                                                    <div className="pt-4">
+                                                                        <Link href={ item.data.technologies_button_link } aria_label={ item.data.technologies_button_text }>
+                                                                            <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.technologies_button_text }</p>
+                                                                        </Link>
                                                                     </div>
                                                                 </div>
 
                                                             }
                                                             {
 
-                                                                item.data.title === "Why Partner with us" &&
+                                                                item.data.title === "Why Partner with us" || item.data.title === "Resource hub" &&
                                                                 // || item.data.title === "Resource hub"
                                                                 <div className="space-y-6 p-10">
                                                                     {
