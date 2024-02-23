@@ -9,12 +9,16 @@ export const homeAPI = async ( environment, ENDPOINT ) => {
     let home_data = {
 
         // HOME PROPS
-        hero : "",
-        trusted_companies : "",
         award_winning : "",
-        key_services : "",
         book_a_conversation : "",
-        case_studies : ""
+        call_description_one : "",
+        call_description_three : "",
+        call_description_two : "",
+        case_studies : "",
+        contact_us : "",
+        hero : "",
+        key_services : "",
+        trusted_companies : ""
 
     }
     home.map( ( data ) => {
@@ -31,6 +35,14 @@ export const homeAPI = async ( environment, ENDPOINT ) => {
             home_data.book_a_conversation = data
         else if ( data.slug === "case-studies" )
             home_data.case_studies = data
+        else if ( data.slug === "call-description-one" )
+            home_data.call_description_one = data
+        else if ( data.slug === "call-description-two" )
+            home_data.call_description_two = data
+        else if ( data.slug === "call-description-three" )
+            home_data.call_description_three = data
+        else if ( data.slug === "contact-us" )
+            home_data.contact_us = data
 
     })
 

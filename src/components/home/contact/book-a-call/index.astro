@@ -9,38 +9,35 @@ import HeadingThree from "@/atoms/headings/three/index.astro"
 // ASTRO PROPS
 const {
 
+    book_a_conversation,
+    call_description_one,
+    call_description_three,
+    call_description_two,
     CDN,
     PROJECT
 
 } = Astro.props
-
-const title = "Book a conversation and in 30-minutes we'll"
-
-const data = Array(3).fill({
-
-    text: "Give you Clarity so you know what good can look like",
-    source: ""
-
-})
 ---
 <section class="space-y-12">
-    <HeadingThree>{ title }</HeadingThree>
+    <HeadingThree>{ book_a_conversation.title }</HeadingThree>
     <div class="space-y-10">
-        {
-
-            data.map( ( value ) => {
-
-                return(
-                    <CallDescription
-                        CDN={ CDN }
-                        PROJECT={ PROJECT }
-                        source={ value.source }
-                        text={ value.text }
-                    />
-                )
-
-            })
-
-        }
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_one.cover }
+            text={ call_description_one.description }
+        />
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_two.cover }
+            text={ call_description_two.description }
+        />
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_three.cover }
+            text={ call_description_three.description }
+        />
     </div>
 </section>

@@ -10,7 +10,12 @@ import ContactUs from "@/components/home/contact/contact-us/index.astro"
 // ASTRO PROPS
 const {
 
+    book_a_conversation,
+    call_description_one,
+    call_description_three,
+    call_description_two,
     CDN,
+    contact_us,
     PROJECT
 
 } = Astro.props
@@ -18,9 +23,18 @@ const {
 ---
 <section class="py-40 md:px-40 2xl:px-60">
     <Container>
-        <section class="grid grid-cols-2 gap-10">
-            <BookACall />
-            <ContactUs />
+        <section class="grid grid-cols-2 gap-28">
+            <BookACall
+                book_a_conversation={ book_a_conversation }
+                call_description_one={ call_description_one }
+                call_description_three={ call_description_three }
+                call_description_two={ call_description_two }
+                CDN={ CDN }
+                PROJECT={ PROJECT }
+            />
+            <ContactUs
+                data={ contact_us }
+            />
         </section>
     </Container>
 </section>
