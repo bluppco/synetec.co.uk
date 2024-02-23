@@ -1,0 +1,41 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import ServiceCard from "@/components/home/key-services/services/card/index.astro"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT
+
+} = Astro.props
+
+---
+<Container>
+    <section class="bg-synetec_gray p-10 grid grid-cols-4 gap-4">
+        {
+
+            data.map( ( value ) => {
+
+                return(
+                    <ServiceCard
+                        button_link={ value.button_link }
+                        button_title={ value.button_text }
+                        CDN={ CDN }
+                        description={ value.description }
+                        PROJECT={ PROJECT }
+                        source={ value.cover }
+                        title={ value.title }
+                    />
+                )
+
+            })
+
+        }
+    </section>
+</Container>

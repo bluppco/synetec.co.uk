@@ -1,0 +1,43 @@
+---
+
+// IMPORTS ASTRO COMPONENTS
+import CallDescription from "@/components/home/contact/book-a-call/call-description/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import HeadingThree from "@/atoms/headings/three/index.astro"
+
+// ASTRO PROPS
+const {
+
+    book_a_conversation,
+    call_description_one,
+    call_description_three,
+    call_description_two,
+    CDN,
+    PROJECT
+
+} = Astro.props
+---
+<section class="space-y-12">
+    <HeadingThree>{ book_a_conversation.title }</HeadingThree>
+    <div class="space-y-10">
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_one.cover }
+            text={ call_description_one.description }
+        />
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_two.cover }
+            text={ call_description_two.description }
+        />
+        <CallDescription
+            CDN={ CDN }
+            PROJECT={ PROJECT }
+            source={ call_description_three.cover }
+            text={ call_description_three.description }
+        />
+    </div>
+</section>
