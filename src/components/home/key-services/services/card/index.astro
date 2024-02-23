@@ -20,18 +20,22 @@ const {
 } = Astro.props
 
 ---
-<div class="space-y-6 p-8 bg-white hover:bg-[#eaeaea] shadow-sm hover:shadow-none border border-[#d3d3d3] border-t-8 border-t-synetec_blue transition-all duration-200">
-    <div class="bg-zinc-200 size-20">
-        <PictureContain
-            alternative_text={ title }
-            CDN={ CDN }
-            image_width="160"
-            PROJECT={ PROJECT }
-            source={ source }
-        />
+<div class="flex flex-col gap-6 justify-between p-8 bg-white hover:bg-[#eaeaea] shadow-sm hover:shadow-none border border-[#d3d3d3] border-t-8 border-t-synetec_blue transition-all duration-200">
+    <div class="space-y-6">
+        <div class="bg-zinc-200 size-20">
+            <PictureContain
+                alternative_text={ title }
+                CDN={ CDN }
+                image_width="160"
+                PROJECT={ PROJECT }
+                source={ source }
+            />
+        </div>
+        <div class="">
+            <h4 class="text-3xl font-semibold font-poppins text-synetec_dark_blue leading-snug">{ title }</h4>
+        </div>
+        <ParagraphRegularZinc>{ description }</ParagraphRegularZinc>
     </div>
-    <h4 class="text-3xl font-semibold font-poppins text-synetec_dark_blue leading-snug">{ title }</h4>
-    <ParagraphRegularZinc>{ description }</ParagraphRegularZinc>
     <div class="pt-4">
         <Link href={ button_link } aria_label={ button_title }>
             <ArrowButton>{ button_title }</ArrowButton>
