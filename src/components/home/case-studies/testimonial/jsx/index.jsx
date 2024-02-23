@@ -35,10 +35,10 @@ const Testimonial = ( props ) => {
                             source="/icons/double-quote.svg"
                         />
                     </div>
-                    <p className="text-2xl font-poppins font-medium italic text-synetec_light_gray">{ short_description }</p>
+                    <p className="text-2xl font-poppins font-medium italic text-synetec_light_gray text-left">{ short_description }</p>
                 </div>
             </div>
-            <p className="text-lg text-synetec_slate font-poppins">{ description }</p>
+            <p className="text-lg text-synetec_slate font-poppins text-left">{ description }</p>
         </section>
     )
 
