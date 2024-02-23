@@ -6,16 +6,10 @@ import ContactForm from "@/components/home/contact/contact-us/form/index.jsx"
 // IMPORTS ASTRO ATOMS
 import ParagraphSmallDarkBlue from "@/atoms/paragraphs/small/dark-blue/index.astro"
 
-const data = {
-
-    title: "Speak to us about your bespoke software development goals",
-    button_text: "Contact Us",
-    description: "By submitting this form, you agree to Synetec's Privacy Policy."
-
-}
+const { data } = Astro.props
 
 ---
-<section>
+<section class="pt-4">
     <h3 class="text-synetec_dark_blue text-2xl font-poppins font-semibold">{ data.title }</h3>
     <ContactForm client:only />
     <ParagraphSmallDarkBlue>{ data.description }</ParagraphSmallDarkBlue>
