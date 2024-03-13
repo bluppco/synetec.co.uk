@@ -28,7 +28,7 @@ const {
 } = Astro.props
 
 ---
-<section class="bg-blue-950 pt-32">
+<section class="pt-32 bg-cover bg-no-repeat" style=`background-image: url(${ "/hero-background.png" + "?quality=80" })`>
     <Container>
         <section class="grid grid-cols-3 gap-14 py-12">
             <section class="col-span-2 flex flex-col gap-4 justify-center">
@@ -44,7 +44,7 @@ const {
                 </div>
             </section>
             <section class="relative h-full">
-                <div class="w-full aspect-[5/6] bg-white/10 p-3 rounded-lg overflow-hidden">
+                <div class="w-full aspect-[5/6] bg-white/10 p-3 rounded-lg overflow-hidden shadow-2xl shadow-[#1c8cde59]">
                     <Picture
                         alternative_text={ data.title }
                         CDN={ CDN }

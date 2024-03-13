@@ -26,7 +26,7 @@ const UnorderedList = ( props ) => {
                                         source="/icons/dropdown.svg"
                                     />
                                 </div>
-                                <div className={` ${ item.data.title === "Services" ? "-left-44 w-[1020px]" : "-left-20 w-[420px]" } hidden group-hover:block group-hover:flex-col absolute bg-white z-20 top-20 rounded-md gap-2 transition-all duration-1000 ease-in `}>
+                                <div className={` ${ item.data.title === "Services" ? "-left-44 w-[1020px]" : "-left-20 w-[420px]" } invisible group-hover:visible opacity-0 group-hover:opacity-100 top-24 group-hover:top-20 -z-50 group-hover:z-20 group-hover:flex-col absolute bg-white rounded-md gap-2 transition-all duration-300`}>
                                     {
 
                                         item.data.title === "Services" &&
@@ -94,6 +94,12 @@ const UnorderedList = ( props ) => {
                                                     <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.technologies_button_text }</p>
                                                 </Link>
                                             </div>
+                                            <div className="size-6 absolute left-52 -top-4">
+                                                <PictureInternalContain
+                                                    alternative_text="navigation arrow"
+                                                    source="/icons/white-nav-arrow.svg"
+                                                />
+                                            </div>
                                         </div>
 
                                     }
@@ -133,6 +139,12 @@ const UnorderedList = ( props ) => {
                                             <div className="pt-4">
                                                 <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.button_text }</p>
                                             </div>
+                                            <div className="size-6 absolute left-40 -top-10">
+                                                <PictureInternalContain
+                                                    alternative_text="navigation arrow"
+                                                    source="/icons/white-nav-arrow.svg"
+                                                />
+                                            </div>
                                         </div>
 
                                     }
@@ -170,6 +182,12 @@ const UnorderedList = ( props ) => {
                                             }
                                         <div className="pt-4">
                                             <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.button_text }</p>
+                                        </div>
+                                        <div className="size-6 absolute left-32 -top-10">
+                                            <PictureInternalContain
+                                                alternative_text="navigation arrow"
+                                                source="/icons/white-nav-arrow.svg"
+                                            />
                                         </div>
                                     </div>
 
