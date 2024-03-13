@@ -67,6 +67,9 @@ const UnorderedList = ( props ) => {
                                                     <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.services_button_text }</p>
                                                 </Link>
                                             </div>
+                                            <p className="font-poppins font-semibold uppercase text-xs text-synetec_zinc tracking-widest">Technologies</p>
+                                            <div/>
+                                            <div/>
                                             {
 
                                                 item.data.technologies.map( ( sub_item, sub_item_index ) => {
@@ -96,7 +99,7 @@ const UnorderedList = ( props ) => {
                                     }
                                     {
 
-                                        item.data.title === "Why Partner with us" || item.data.title === "Resource hub" &&
+                                        item.data.title === "Why Partner with us" &&
                                         // || item.data.title === "Resource hub"
                                         <div className="space-y-6 p-10">
                                             {
@@ -131,6 +134,44 @@ const UnorderedList = ( props ) => {
                                                 <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.button_text }</p>
                                             </div>
                                         </div>
+
+                                    }
+                                    {
+
+                                        item.data.title === "Resource hub" &&
+                                        <div className="space-y-6 p-10">
+                                            {
+
+                                                item.data.items.map( ( sub_item, sub_item_index ) => {
+
+                                                    return(
+                                                        <div key={ sub_item_index } className="p-2 rounded hover:bg-zinc-50">
+                                                            <Link href={ "/" + item.data.slug + "/" + sub_item.slug } aria_label={ "explore" + sub_item.title }>
+                                                                <div className="flex items-center gap-4">
+                                                                    <div className="p-2 bg-zinc-50 rounded-full border border-gray-200 h-fit">
+                                                                        <div className="size-8">
+                                                                            <PictureInternalContain
+                                                                                alternative_text={ sub_item.title }
+                                                                                source={ "/icons/" + sub_item.src }
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <p className="font-poppins font-semibold text-[#00104b] text-lg">{ sub_item.title }</p>
+                                                                        <p className="text-sm text-[#00104b]/50 font-poppins">{ sub_item.description }</p>
+                                                                    </div>
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+                                                    )
+
+                                                })
+
+                                            }
+                                        <div className="pt-4">
+                                            <p className="font-poppins font-semibold text-lg text-[#00104b]">{ item.data.button_text }</p>
+                                        </div>
+                                    </div>
 
                                     }
                                 </div>
