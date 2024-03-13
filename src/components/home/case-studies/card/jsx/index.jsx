@@ -5,7 +5,7 @@ import PictureContainLeft from "@/atoms/picture/contain/left/jsx/index.jsx"
 
 const CaseStudyCard = ( props ) => {
 
-    // PROPS
+    // GET PROPS
     const {
 
         button_link,
@@ -22,7 +22,7 @@ const CaseStudyCard = ( props ) => {
         <section className="space-y-8 bg-white/[0.04] p-10 border border-[#505050] shadow-2xl shadow-[#1c8cde24] rounded-md h-full">
             <div className="h-20 w-full pb-6">
                 <PictureContainLeft
-                    alternative_text=""
+                    alternative_text={ title }
                     CDN={ CDN }
                     image_width="400"
                     PROJECT={ PROJECT }

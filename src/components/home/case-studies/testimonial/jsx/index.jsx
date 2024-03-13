@@ -1,11 +1,10 @@
 // IMPORTS ATOMS
-import SecondaryButton from "@/atoms/buttons/secondary/jsx/index.jsx"
-import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 import Picture from "@/atoms/picture/jsx/index.jsx"
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
 const Testimonial = ( props ) => {
 
-    // PROPS
+    // GET PROPS
     const {
 
         CDN,
@@ -21,7 +20,7 @@ const Testimonial = ( props ) => {
             <div className="grid grid-cols-3 gap-6">
                 <div className="h-60 w-full bg-synetec_slate p-2">
                     <Picture
-                        alternative_text=""
+                        alternative_text={ short_description }
                         CDN={ CDN }
                         image_width="400"
                         PROJECT={ PROJECT }
