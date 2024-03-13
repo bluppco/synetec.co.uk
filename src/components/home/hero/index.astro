@@ -28,10 +28,10 @@ const {
 } = Astro.props
 
 ---
-<section class="pt-32 bg-cover bg-no-repeat" style=`background-image: url(${ "/hero-background.png" + "?quality=80" })`>
+<section class="mt-32 bg-cover bg-no-repeat" style=`background-image: url(${ "/hero-background.png" + "?quality=80" })`>
     <Container>
-        <section class="grid grid-cols-3 gap-14 py-12">
-            <section class="col-span-2 flex flex-col gap-4 justify-center">
+        <section class="grid grid-cols-3 gap-14 py-16">
+            <section class="col-span-2 flex flex-col gap-4 justify-center pr-32">
                 <HeadingOne>{ data.title }</HeadingOne>
                 <ParagraphXl>{ data.description }</ParagraphXl>
                 <div class="flex gap-4 pt-12">

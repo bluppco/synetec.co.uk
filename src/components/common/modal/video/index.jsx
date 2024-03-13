@@ -1,13 +1,21 @@
+// IMPORTS ATOMS
+import PictureInternal from "@/atoms/picture/internal/jsx/index.jsx"
+
 // IMPORTS MODAL FROM REACT
 import Modal from "react-modal"
 
 // IMPORTS CUSTOM MODAL STYLING
 import { modalStyling } from "@/components/common/modal/styling/index.jsx"
-import PictureInternal from "@/atoms/picture/internal/jsx"
 
 const VideoModal = ( props ) => {
 
-    const { open, close } = props
+    // GET PROPS
+    const {
+
+        close,
+        open
+
+    } = props
 
     return (
         <Modal
@@ -28,12 +36,13 @@ const VideoModal = ( props ) => {
                 </div>
                 <div className="h-full w-full">
                 <iframe
-                    width="940"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                    frameborder="0"
                     height="600"
                     src="https://www.youtube.com/embed/xphPqv5XjxY?si=BhU46FugmeumohRP"
                     title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    width="940"
+                >
                 </iframe>
                 </div>
             </div>
