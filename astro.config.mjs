@@ -17,7 +17,7 @@ export default defineConfig({
 
 		routes: {
 
-			exclude: ["/icons/*", "/images/*"]
+			exclude: ["/icons/*", "/images/*", "/logo/*"]
 
 		},
 		runtime: {
@@ -27,6 +27,13 @@ export default defineConfig({
 
 		}
 
-	})
+	}),
+	image: {
+
+		service: {
+			entrypoint: "astro/assets/services/noop"
+		}
+
+	},
 
 })
