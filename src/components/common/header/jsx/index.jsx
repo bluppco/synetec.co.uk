@@ -55,8 +55,16 @@ const Header = ( props ) => {
                         </div>
                     </section>
                     <section className="flex items-center gap-8 relative z-50">
-                        <div>
-                            <span className="text-xs text-white">+44 (0) 2081 444 206</span>
+                        <div className="flex items-center gap-2">
+                            <div className="size-4">
+                                <PictureInternalContain
+                                    alternative_text="phone icon"
+                                    source="/icons/phone.png"
+                                />
+                            </div>
+                            <Link href="tel:+44(0)2081444206" aria-label="call +44 (0) 2081 444 206">
+                                <span className="text-xs text-white">+44 (0) 2081 444 206</span>
+                            </Link>
                         </div>
                         <div className="flex justify-self-end w-fit">
                             <Link href="/contact" aria-label="Contact Us">
