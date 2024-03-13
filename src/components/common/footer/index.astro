@@ -24,15 +24,15 @@ import { frontmatter as Awards } from "@/content/footer-headings/awards.md"
 import { frontmatter as Clutch } from "@/content/footer-headings/clutch.md"
 
 ---
-<footer class="bg-synetec_black py-24">
+<footer class="bg-synetec_black py-12 md:py-24">
     <Container>
-        <section class="grid grid-cols-6 gap-10">
-            <section class="col-span-2">
+        <section class="grid md:grid-cols-6 gap-10">
+            <section class="md:col-span-2">
                 <FooterColumnOne
                     footer_column_one={ footer_column_one }
                 />
             </section>
-            <section class="col-span-4">
+            <section class="md:col-span-4">
                 <FooterColumnTwo
                     footer_column_two={ footer_column_two }
                     heading_award={ Awards.title }

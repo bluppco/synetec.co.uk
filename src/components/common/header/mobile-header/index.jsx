@@ -1,9 +1,3 @@
-// IMPORTS FRAMER MOTION
-import { motion, AnimatePresence } from "framer-motion"
-
-// IMPORTS REACT
-import { useState } from "react"
-
 // IMPORTS COMPONENTS
 import ListItem from "@/atoms/header/mobile/list-item/index.jsx"
 
@@ -11,12 +5,18 @@ import ListItem from "@/atoms/header/mobile/list-item/index.jsx"
 import Link from "@/atoms/links/jsx/index.jsx"
 import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
+// IMPORTS FRAMER MOTION
+import { motion, AnimatePresence } from "framer-motion"
+
+// IMPORTS REACT
+import { useState } from "react"
+
 const HeaderMobile = ( props ) => {
 
     const [ isOpen, updateOpen ] = useState( false )
 
     return (
-        <header className="md:hidden bg-white px-4 z-[100] py-4 border-b border-gray-100">
+        <header className="md:hidden bg-synetec_dark_blue px-4 z-50 py-4 border-b border-gray-100 fixed top-14 w-full">
             <div className="flex justify-between items-center relative">
                 <Link href="/" aria_label="header logo">
                     <div className="w-24 aspect-[5/2]">
@@ -30,7 +30,7 @@ const HeaderMobile = ( props ) => {
                     {
 
                         isOpen &&
-                        <div className="w-6 aspect-square">
+                        <div className="w-5 aspect-square">
                             <PictureInternalContain
                                 alternative_text="close icon"
                                 source="/icons/close.svg"

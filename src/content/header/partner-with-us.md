@@ -1,5 +1,6 @@
 ---
 title: Why Partner with us
+slug: "partner"
 order: 2
 has_dropdown: true
 items: [

@@ -14,7 +14,7 @@ const UnorderedList = ( props ) => {
             header_data.map( ( item, index ) => {
 
                 return (
-                    <li key={ index } className="relative font-poppins font-medium text-white hover:text-synetec_orang transition-all duration-200 text-sm flex items-center gap-1 group cursor-pointer py-10 px-3">
+                    <li key={ index } className="relative font-poppins font-medium text-white hover:text-synetec_orange transition-all duration-200 text-sm flex items-center gap-1 group cursor-pointer py-10 px-3">
                         <a href={ "/" + item.data.slug } aria-label={"explore " + item.data.title }>{ item.data.title }</a>
                         {
 

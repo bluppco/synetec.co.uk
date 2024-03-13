@@ -9,7 +9,7 @@ const { footer_column_one } = Astro.props
 
 ---
 <section class="space-y-4">
-    <div class="size-24">
+    <div class="size-16 md:size-24">
         <PictureInternalContain
             alternative_text={ footer_column_one[0].data.image_alternative_text }
             source={ footer_column_one[0].data.image_source }
@@ -21,7 +21,7 @@ const { footer_column_one } = Astro.props
             footer_column_one.slice(1,5).map( ( value ) => {
 
                 return(
-                    <p class="text-synetec_slate text-2xl font-poppins font-medium">{ value.data.title }</p>
+                    <p class="text-synetec_slate text-lg md:text-2xl font-poppins font-medium">{ value.data.title }</p>
                 )
 
             })
