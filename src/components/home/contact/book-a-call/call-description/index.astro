@@ -4,7 +4,7 @@
 import ParagraphLarge from "@/atoms/paragraphs/large/dark-blue/index.astro"
 import PictureContain from "@/atoms/picture/contain/index.astro"
 
-// ASTRO PROPS
+// GET ASTRO PROPS
 const {
 
     CDN,
@@ -19,7 +19,7 @@ const {
     <div class="p-2 bg-gray-50">
         <div class="size-6">
             <PictureContain
-                alternative_text=""
+                alternative_text={ text }
                 CDN={ CDN }
                 image_width="440"
                 PROJECT={ PROJECT }

@@ -6,7 +6,7 @@ import CallDescription from "@/components/home/contact/book-a-call/call-descript
 // IMPORTS ASTRO ATOMS
 import HeadingThree from "@/atoms/headings/three/index.astro"
 
-// ASTRO PROPS
+// GET ASTRO PROPS
 const {
 
     book_a_conversation,
@@ -18,7 +18,7 @@ const {
 
 } = Astro.props
 ---
-<section class="space-y-12">
+<section class="space-y-6">
     <HeadingThree>{ book_a_conversation.title }</HeadingThree>
     <div class="space-y-10">
         <CallDescription

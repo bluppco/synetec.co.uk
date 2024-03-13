@@ -4,8 +4,8 @@
 import Container from "@/layouts/container/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import TrustedByCompanies from "@/components/home/hero/trusted-by-companies/index.astro"
 import AwardWinning from "@/components/home/hero/award-winning/index.astro"
+import TrustedByCompanies from "@/components/home/hero/trusted-by-companies/index.astro"
 
 // IMPORTS ASTRO ATOMS
 import HeadingOne from "@/atoms/headings/one/white/index.astro"
@@ -16,7 +16,7 @@ import PlayIcon from "@/components/home/hero/play-icon/index.jsx"
 import PrimaryButton from "@/atoms/buttons/primary/index.astro"
 import SecondaryButton from "@/atoms/buttons/secondary/index.astro"
 
-// ASTRO PROPS
+// GET ASTRO PROPS
 const {
 
     award_winning,
@@ -28,7 +28,7 @@ const {
 } = Astro.props
 
 ---
-<section class="bg-blue-950 pt-32">
+<section class="pt-32 bg-cover bg-no-repeat" style=`background-image: url(${ "/hero-background.png" + "?quality=80" })`>
     <Container>
         <section class="grid grid-cols-3 gap-14 py-12">
             <section class="col-span-2 flex flex-col gap-4 justify-center">
@@ -44,7 +44,7 @@ const {
                 </div>
             </section>
             <section class="relative h-full">
-                <div class="w-full aspect-[5/6] bg-white/10 p-3 rounded-lg overflow-hidden">
+                <div class="w-full aspect-[5/6] bg-white/10 p-3 rounded-lg overflow-hidden shadow-2xl shadow-[#1c8cde59]">
                     <Picture
                         alternative_text={ data.title }
                         CDN={ CDN }

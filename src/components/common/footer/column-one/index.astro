@@ -1,10 +1,10 @@
 ---
 
 // IMPORTS ASTRO ATOMS
-import Link from "@/atoms/links/index.astro"
+import Link from "@/atoms/links/target-blank/index.astro"
 import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
 
-// ASTRO PROPS
+// GET ASTRO PROPS
 const { footer_column_one } = Astro.props
 
 ---
@@ -50,12 +50,14 @@ const { footer_column_one } = Astro.props
             footer_column_one.slice(7,9).map( ( value, index ) => {
 
                 return(
-                    <div class={` ${ index === 0 ? "size-6" : "size-8" } `}>
-                        <PictureInternalContain
-                            alternative_text={ value.data.image_alternative_text }
-                            source={ value.data.image_source }
-                        />
-                    </div>
+                    <Link href={ value.data.link } aria_label={ value.data.title }>
+                        <div class={` ${ index === 0 ? "size-6" : "size-8" } `}>
+                            <PictureInternalContain
+                                alternative_text={ value.data.image_alternative_text }
+                                source={ value.data.image_source }
+                            />
+                        </div>
+                    </Link>
                 )
 
             })

@@ -9,10 +9,11 @@ import { Turnstile } from '@marsidev/react-turnstile'
 
 const ContactForm = ( props ) => {
 
+    // GET PROPS
     const {
 
         cy,
-        type,
+        type
 
     } = props
 
@@ -105,48 +106,48 @@ const ContactForm = ( props ) => {
     }
 
     return (
-        <section className="pt-10 pb-6">
+        <section className="py-6">
             <div className="space-y-2">
                 <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6">
                         <input
-                            type="text"
-                            placeholder="First Name *"
                             className="h-12 w-full border-[1.5px] border-[#d7d7d7] rounded px-3"
-                            value={ state.name }
                             name="first name"
                             onChange={ ( event ) => onChangeValue( event ) }
+                            placeholder="First Name *"
+                            type="text"
+                            value={ state.name }
                         />
                         <input
-                            type="text"
-                            placeholder="Last Name *"
                             className="h-12 w-full border-[1.5px] border-[#d7d7d7] rounded px-3"
-                            value={ state.name }
                             name="last name"
                             onChange={ ( event ) => onChangeValue( event ) }
+                            placeholder="Last Name *"
+                            type="text"
+                            value={ state.name }
                         />
                     </div>
                     <input
-                        type="text"
-                        placeholder="Business Email *"
                         className="h-12 w-full border-[1.5px] border-[#d7d7d7] rounded px-3"
-                        value={ state.name }
                         name="business email"
                         onChange={ ( event ) => onChangeValue( event ) }
+                        placeholder="Business Email *"
+                        type="text"
+                        value={ state.name }
                     />
                     <input
-                        type="text"
-                        placeholder="Company Name *"
                         className="h-12 w-full border-[1.5px] border-[#d7d7d7] rounded px-3"
-                        value={ state.name }
                         name="company name"
                         onChange={ ( event ) => onChangeValue( event ) }
+                        placeholder="Company Name *"
+                        type="text"
+                        value={ state.name }
                     />
                 </div>
                 <Turnstile
-                    siteKey="0x4AAAAAAAOfA3BnLZ8S-_Kf"
-                    onSuccess={ ( token ) => updateTurnstileToken( token ) }
                     className="w-full bg-zinc-200 rounded hidden"
+                    onSuccess={ ( token ) => updateTurnstileToken( token ) }
+                    siteKey="0x4AAAAAAAOfA3BnLZ8S-_Kf"
                 />
                 <div className="pt-1 md:pt-2">
                     {
