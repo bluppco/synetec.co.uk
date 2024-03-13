@@ -29,7 +29,7 @@ const CaseStudyCard = ( props ) => {
                     source={ source }
                 />
             </div>
-            <h3 className="text-synetec_white font-poppins font-semibold text-4xl text-left">{ title }</h3>
+            <h3 className="text-synetec_white font-poppins font-semibold text-4xl text-left leading-snug">{ title }</h3>
             <div className="pt-2">
                 <p className="text-lg text-synetec_slate font-poppins text-left">{ description }</p>
             </div>
