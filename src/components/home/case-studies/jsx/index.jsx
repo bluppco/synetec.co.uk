@@ -54,16 +54,16 @@ const CaseStudies = ( props ) => {
                         </button>
                 )}
             >
-                <section className="py-40 bg-cover" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
+                <section className="py-12 md:py-40 bg-cover" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
                     <Container>
                         {
 
                             case_studies.map( ( value, index ) => {
 
                                 return(
-                                    <section className="grid grid-cols-2 gap-12" key={ index }>
-                                        <section className="space-y-12">
-                                            <h2 className="text-6xl text-synetec_white font-poppins font-bold text-left">{ data.title }</h2>
+                                    <section className="grid md:grid-cols-2 gap-12" key={ index }>
+                                        <section className="space-y-6 md:space-y-12">
+                                            <h2 className="text-5xl md:text-6xl text-synetec_white font-poppins font-bold text-left">{ data.title }</h2>
                                             <p className="font-poppins font-light text-xl text-synetec_light_gray text-left">{ data.description }</p>
                                             <div className="pt-2">
                                                 <Link href={ data.button_one_link } aria_label={ data.button_one_text }>

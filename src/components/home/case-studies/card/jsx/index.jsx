@@ -19,7 +19,7 @@ const CaseStudyCard = ( props ) => {
     } = props
 
     return(
-        <section className="space-y-8 bg-white/[0.04] p-10 border border-[#505050] shadow-2xl shadow-[#1c8cde24] rounded-md h-full">
+        <section className="space-y-4 md:space-y-8 bg-white/[0.04] p-4 md:p-10 border border-[#505050] shadow-2xl shadow-[#1c8cde24] rounded-md h-full">
             <div className="h-20 w-full pb-6">
                 <PictureContainLeft
                     alternative_text={ title }
@@ -29,8 +29,8 @@ const CaseStudyCard = ( props ) => {
                     source={ source }
                 />
             </div>
-            <h3 className="text-synetec_white font-poppins font-semibold text-4xl text-left leading-snug">{ title }</h3>
-            <div className="pt-2">
+            <h3 className="text-synetec_white font-poppins font-semibold text-2xl md:text-4xl text-left leading-snug">{ title }</h3>
+            <div className="md:pt-2 pb-2 md:pb-0">
                 <p className="text-lg text-synetec_slate font-poppins text-left">{ description }</p>
             </div>
             <Link href={ button_link } aria_label={ button_text }>

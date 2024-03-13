@@ -19,7 +19,7 @@ const images = data.images.sort( ( a, b ) => a.order - b.order )
 ---
 <section class="space-y-6">
     <HeadingSix>{ data.title }</HeadingSix>
-    <div class="flex items-center">
+    <div class="flex flex-wrap md:items-center gap-4 md:gap-0">
         {
 
             images.map( ( value ) => {

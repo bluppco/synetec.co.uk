@@ -30,11 +30,11 @@ const {
 ---
 <section class="mt-32 bg-cover bg-no-repeat" style=`background-image: url(${ "/hero-background.png" + "?quality=80" })`>
     <Container>
-        <section class="grid grid-cols-3 gap-14 py-16">
-            <section class="col-span-2 flex flex-col gap-4 justify-center pr-32">
+        <section class="grid md:grid-cols-3 gap-14 py-8 md:py-16">
+            <section class="md:col-span-2 flex flex-col gap-4 justify-center md:pr-32">
                 <HeadingOne>{ data.title }</HeadingOne>
                 <ParagraphXl>{ data.description }</ParagraphXl>
-                <div class="flex gap-4 pt-12">
+                <div class="flex flex-col md:flex-row gap-4 pt-4 md:pt-12">
                     <Link href={ data.button_one_link } aria_label={ data.button_one_text }>
                         <PrimaryButton>{ data.button_one_text }</PrimaryButton>
                     </Link>
@@ -64,7 +64,7 @@ const {
             </section>
         </section>
     </Container>
-    <section class="grid grid-cols-2 gap-40 py-8 bg-white/10 backdrop-blur-sm md:px-6 2xl:px-12">
+    <section class="grid md:grid-cols-2 gap-10 md:gap-40 py-8 bg-white/10 backdrop-blur-sm px-4 md:px-6 2xl:px-12">
         <TrustedByCompanies
             CDN={ CDN }
             data={ trusted_companies }

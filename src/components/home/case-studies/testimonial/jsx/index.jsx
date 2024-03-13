@@ -17,8 +17,8 @@ const Testimonial = ( props ) => {
 
     return(
         <section className="space-y-6">
-            <div className="grid grid-cols-3 gap-6">
-                <div className="h-60 w-full bg-synetec_slate p-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="md:h-60 w-full bg-synetec_slate p-2">
                     <Picture
                         alternative_text={ short_description }
                         CDN={ CDN }
@@ -27,14 +27,14 @@ const Testimonial = ( props ) => {
                         source={ source[0].file }
                     />
                 </div>
-                <div className="col-span-2 flex flex-col gap-4 justify-center">
-                    <div className="size-14">
+                <div className="md:col-span-2 flex flex-col gap-4 justify-center">
+                    <div className="size-8 md:size-14">
                         <PictureInternalContain
                             alternative_text="double quotes"
                             source="/icons/double-quote.svg"
                         />
                     </div>
-                    <p className="text-2xl font-poppins font-medium italic text-synetec_light_gray text-left">{ short_description }</p>
+                    <p className="md:text-2xl font-poppins font-medium italic text-synetec_light_gray text-left">{ short_description }</p>
                 </div>
             </div>
             <p className="text-lg text-synetec_slate font-poppins text-left">{ description }</p>
