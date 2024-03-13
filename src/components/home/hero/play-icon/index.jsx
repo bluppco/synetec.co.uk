@@ -1,15 +1,15 @@
-// IMPORTS ATOMS
-import PictureContain from "@/atoms/picture/contain/jsx/index.jsx"
-
 // IMPORTS COMPONENTS
 import VideoModal from "@/components/common/modal/video/index.jsx"
+
+// IMPORTS ATOMS
+import PictureContain from "@/atoms/picture/contain/jsx/index.jsx"
 
 // IMPORTS REACT
 import React from "react"
 
 const PlayIcon = ( props ) => {
 
-    // PROPS
+    // GET PROPS
     const {
 
         CDN,
@@ -58,7 +58,11 @@ const PlayIcon = ( props ) => {
                     source={ image }
                 />
             </div>
-            <VideoModal open={ state.open_modal } value={ state.value } close={ () => closeModal() } />
+            <VideoModal
+                close={ () => closeModal() }
+                open={ state.open_modal }
+                value={ state.value }
+            />
         </div>
     )
 

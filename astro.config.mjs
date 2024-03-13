@@ -1,8 +1,9 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config"
 
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
-import cloudflare from "@astrojs/cloudflare";
+import cloudflare from "@astrojs/cloudflare"
+import mdx from "@astrojs/mdx"
+import react from "@astrojs/react"
+import tailwind from "@astrojs/tailwind"
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,13 +12,13 @@ export default defineConfig({
 
 		applyBaseStyles: false
 
-	}), react()],
+	}), react(), mdx()],
   	output: "server",
   	adapter: cloudflare({
 
 		routes: {
 
-			exclude: ["/icons/*", "/images/*"]
+			exclude: ["/icons/*", "/images/*", "/logo/*", "/_astro/*"]
 
 		},
 		runtime: {
@@ -27,6 +28,13 @@ export default defineConfig({
 
 		}
 
-	})
+	}),
+	image: {
+
+		service: {
+			entrypoint: "astro/assets/services/noop"
+		}
+
+	},
 
 })

@@ -21,11 +21,13 @@ const {
 } = Astro.props
 
 const description = marked.parse( data.description )
+const title = marked.parse( data.title )
+
 ---
 <section class="py-40 space-y-20">
     <section class="md:max-w-3xl 2xl:max-w-4xl mx-auto space-y-6">
-        <h2 class="text-synetec_black text-5xl font-bold font-poppins text-center">{ data.title }</h2>
-        <section set:html={ description } class="markdown text-center" />
+        <section set:html={ title } class="markdown orangeh2 h2 text-center" />
+        <section set:html={ description } class="markdown text-center leading-loose space-y-4" />
         <div class="flex justify-center">
             <Link href={ data.button_one_link } aria_label={ data.button_one_text }>
                 <ArrowButton>{ data.button_one_text }</ArrowButton>

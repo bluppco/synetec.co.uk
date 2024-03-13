@@ -4,7 +4,7 @@
 import FooterHeading from "@/atoms/footer/heading/index.astro"
 import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
 
-// ASTRO PROPS
+// GET ASTRO PROPS
 const {
 
     footer_column_two,
@@ -37,7 +37,12 @@ const {
 
         }
     </section>
-    <div class="pt-4">
-        <FooterHeading>{ heading_clutch }</FooterHeading>
-    </div>
+    {
+
+        false &&
+        <div class="pt-4">
+            <FooterHeading>{ heading_clutch }</FooterHeading>
+        </div>
+
+    }
 </section>
