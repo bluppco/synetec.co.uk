@@ -18,7 +18,7 @@ export default defineConfig({
 
 		routes: {
 
-			exclude: ["/icons/*", "/images/*", "/logo/*"]
+			exclude: ["/icons/*", "/images/*", "/logo/*", "/_astro/*"]
 
 		},
 		runtime: {
