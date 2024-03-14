@@ -30,29 +30,29 @@ const CaseStudies = ( props ) => {
 
     return(
         <section className="relative h-full w-full">
-            <section className="py-12 md:py-40 bg-cover" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
+            <section className="py-12 md:py-40 bg-cover bg-no-repeat overflow-hidden" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
                 <Container>
                     <Carousel showThumbs={ false } showStatus={ false } showArrows={ true } autoPlay={ true } infiniteLoop={ true } showIndicators={ false }
                         renderArrowPrev={( onClickHandler, hasPrev, label ) =>
                             hasPrev && (
                                     <button
-                                        className="absolute top-0 left-1 z-10 flex items-center h-full"
+                                        className="absolute mt-9 md:mt-0 top-0 left-0 md:-left-16 z-10 flex items-center h-full"
                                         onClick={ onClickHandler }
                                         title={ label }
                                         type="button"
                                     >
-                                        <ChevronLeftIcon className="text-white w-12 h-12"/>
+                                        <ChevronLeftIcon className="text-white size-8 md:size-12" />
                                     </button>
                         )}
                         renderArrowNext={( onClickHandler, hasNext, label ) =>
                             hasNext && (
                                 <button
-                                    className="absolute top-0 right-1 z-10 flex items-center h-full"
+                                    className="absolute mt-9 md:mt-0 top-0 right-0 md:-right-16 z-10 flex items-center h-full"
                                     onClick={ onClickHandler }
                                     title={ label }
                                     type="button"
                                 >
-                                    <ChevronRightIcon className="text-white w-12 h-12"/>
+                                    <ChevronRightIcon className="text-white size-8 md:size-12" />
                                 </button>
                         )}
                     >
@@ -62,7 +62,7 @@ const CaseStudies = ( props ) => {
                             case_studies.map( ( value, index ) => {
 
                                 return(
-                                    <section className="grid md:grid-cols-2 gap-12" key={ index }>
+                                    <section className="grid md:grid-cols-2 gap-20 md:gap-12" key={ index }>
                                         <section className="space-y-6 md:space-y-12">
                                             <h2 className="text-5xl md:text-6xl text-synetec_white font-poppins font-bold text-left">{ data.title }</h2>
                                             <p className="font-poppins font-light text-xl text-synetec_light_gray text-left">{ data.description }</p>

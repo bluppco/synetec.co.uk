@@ -34,16 +34,16 @@ const VideoModal = ( props ) => {
                         </div>
                     </div>
                 </div>
-                <div className="h-full w-full">
-                <iframe
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-                    frameborder="0"
-                    height="600"
-                    src="https://www.youtube.com/embed/xphPqv5XjxY?si=BhU46FugmeumohRP"
-                    title="YouTube video player"
-                    width="940"
-                >
-                </iframe>
+                <div className="h-[420px] w-full md:h-[600px] md:w-[940px]">
+                    <iframe
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                        frameborder="0"
+                        height="100%"
+                        src="https://www.youtube.com/embed/xphPqv5XjxY?si=BhU46FugmeumohRP"
+                        title="YouTube video player"
+                        width="100%"
+                    >
+                    </iframe>
                 </div>
             </div>
         </Modal>
