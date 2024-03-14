@@ -12,7 +12,7 @@ const ListItem = ( props ) => {
     } = props
 
     return(
-        <li className="uppercase font-graphik tracking-wider">
+        <li className="uppercase text-white font-graphik tracking-wider">
             <Link href={ href } aria_label={ aria_label }>
                 { props.children }
             </Link>

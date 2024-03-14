@@ -21,7 +21,6 @@ const PlayIcon = ( props ) => {
 
     const [ state, updateState ] = React.useState({
 
-        value: null,
         open_modal: false
 
     })
@@ -29,7 +28,6 @@ const PlayIcon = ( props ) => {
 
         updateState({
 
-            value: null,
             open_modal: false
 
         })
@@ -40,7 +38,6 @@ const PlayIcon = ( props ) => {
 
         updateState({
 
-            value: null,
             open_modal: true
 
         })
@@ -48,22 +45,23 @@ const PlayIcon = ( props ) => {
     }
 
     return(
-        <div className="px-2 md:px-0 w-fit" onClick={ () => openModal() }>
-            <div class="size-16">
-                <PictureContain
-                    alternative_text="play icon"
-                    CDN={ CDN }
-                    image_width="440"
-                    PROJECT={ PROJECT }
-                    source={ image }
-                />
+        <>
+            <div className="px-2 md:px-0 w-fit" onClick={ () => openModal() }>
+                <div class="size-16">
+                    <PictureContain
+                        alternative_text="play icon"
+                        CDN={ CDN }
+                        image_width="440"
+                        PROJECT={ PROJECT }
+                        source={ image }
+                    />
+                </div>
             </div>
             <VideoModal
-                close={ () => closeModal() }
+                close={ ( event ) => closeModal( event ) }
                 open={ state.open_modal }
-                value={ state.value }
             />
-        </div>
+        </>
     )
 
 }

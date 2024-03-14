@@ -1,14 +1,14 @@
 .markdown p {
-    @apply py-2 text-synetec_black text-xl font-poppins font-light leading-normal !important
+    @apply py-2 text-synetec_black text-lg md:text-xl font-poppins font-light leading-normal !important
 }
 .markdown a {
-    @apply text-synetec_orange text-xl font-bold !important
+    @apply text-synetec_orange text-lg md:text-xl font-bold !important
 }
 .markdown.orangeh2 strong {
     @apply text-4xl md:text-6xl font-bold font-poppins text-synetec_orange leading-normal md:leading-normal !important;
 }
 .markdown.orangeh2 p {
-    @apply text-synetec_black text-6xl font-bold font-poppins text-center leading-normal md:leading-normal !important;
+    @apply text-synetec_black text-4xl md:text-6xl font-bold font-poppins text-center leading-normal md:leading-normal !important;
 }
 
 

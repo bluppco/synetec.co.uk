@@ -1,5 +1,6 @@
 ---
 title: Resource hub
+slug: resource-hub
 button_text: See all Resources
 button_link: resource-hub
 order: 4

@@ -16,26 +16,24 @@ const {
 } = Astro.props
 
 ---
-<Container>
-    <section class="bg-synetec_gray p-10 grid grid-cols-4 gap-4">
-        {
+<section class="bg-synetec_gray md:p-10 grid md:grid-cols-4 gap-4">
+    {
 
-            data.map( ( value ) => {
+        data.map( ( value ) => {
 
-                return(
-                    <ServiceCard
-                        button_link={ value.button_link }
-                        button_title={ value.button_text }
-                        CDN={ CDN }
-                        description={ value.description }
-                        PROJECT={ PROJECT }
-                        source={ value.cover }
-                        title={ value.title }
-                    />
-                )
+            return(
+                <ServiceCard
+                    button_link={ value.button_link }
+                    button_title={ value.button_text }
+                    CDN={ CDN }
+                    description={ value.description }
+                    PROJECT={ PROJECT }
+                    source={ value.cover }
+                    title={ value.title }
+                />
+            )
 
-            })
+        })
 
-        }
-    </section>
-</Container>
+    }
+</section>
