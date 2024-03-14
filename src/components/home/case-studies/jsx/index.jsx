@@ -30,32 +30,33 @@ const CaseStudies = ( props ) => {
 
     return(
         <section className="relative h-full w-full">
-            <Carousel showThumbs={ false } showStatus={ false } showArrows={ true } autoPlay={ true } infiniteLoop={ true } showIndicators={ false }
-                renderArrowPrev={( onClickHandler, hasPrev, label ) =>
-                    hasPrev && (
-                            <button
-                                className="absolute top-0 left-1 z-10 flex items-center h-full"
-                                onClick={ onClickHandler }
-                                title={ label }
-                                type="button"
-                            >
-                                <ChevronLeftIcon className="text-white w-12 h-12"/>
-                            </button>
-                )}
-                renderArrowNext={( onClickHandler, hasNext, label ) =>
-                    hasNext && (
-                        <button
-                            className="absolute top-0 right-1 z-10 flex items-center h-full"
-                            onClick={ onClickHandler }
-                            title={ label }
-                            type="button"
-                        >
-                            <ChevronRightIcon className="text-white w-12 h-12"/>
-                        </button>
-                )}
-            >
-                <section className="py-12 md:py-40 bg-cover" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
-                    <Container>
+            <section className="py-12 md:py-40 bg-cover" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
+                <Container>
+                    <Carousel showThumbs={ false } showStatus={ false } showArrows={ true } autoPlay={ true } infiniteLoop={ true } showIndicators={ false }
+                        renderArrowPrev={( onClickHandler, hasPrev, label ) =>
+                            hasPrev && (
+                                    <button
+                                        className="absolute top-0 left-1 z-10 flex items-center h-full"
+                                        onClick={ onClickHandler }
+                                        title={ label }
+                                        type="button"
+                                    >
+                                        <ChevronLeftIcon className="text-white w-12 h-12"/>
+                                    </button>
+                        )}
+                        renderArrowNext={( onClickHandler, hasNext, label ) =>
+                            hasNext && (
+                                <button
+                                    className="absolute top-0 right-1 z-10 flex items-center h-full"
+                                    onClick={ onClickHandler }
+                                    title={ label }
+                                    type="button"
+                                >
+                                    <ChevronRightIcon className="text-white w-12 h-12"/>
+                                </button>
+                        )}
+                    >
+
                         {
 
                             case_studies.map( ( value, index ) => {
@@ -93,9 +94,9 @@ const CaseStudies = ( props ) => {
                             })
 
                         }
-                    </Container>
-                </section>
-            </Carousel>
+                    </Carousel>
+                </Container>
+            </section>
         </section>
     )
 
