@@ -2,7 +2,7 @@
 import VideoModal from "@/components/common/modal/video/index.jsx"
 
 // IMPORTS ATOMS
-import PictureContain from "@/atoms/picture/contain/jsx/index.jsx"
+import PictureInternalContain from "@/atoms/picture/internal/jsx/contain/index.jsx"
 
 // IMPORTS REACT
 import React from "react"
@@ -48,12 +48,9 @@ const PlayIcon = ( props ) => {
         <>
             <div className="px-2 md:px-0 w-fit" onClick={ () => openModal() }>
                 <div class="size-16">
-                    <PictureContain
+                    <PictureInternalContain
                         alternative_text="play icon"
-                        CDN={ CDN }
-                        image_width="440"
-                        PROJECT={ PROJECT }
-                        source={ image }
+                        source="/images/play.png"
                     />
                 </div>
             </div>
