@@ -1,0 +1,47 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Services from "@/components/home/key-services/services/index.astro"
+
+// IMPORTS ASTRO ATOMS
+import ArrowButton from "@/atoms/buttons/arrow/index.astro"
+import Link from "@/atoms/links/index.astro"
+
+// IMPORTS MARKED
+import { marked } from "marked"
+
+// ASTRO PROPS
+const {
+
+    CDN,
+    data,
+    PROJECT,
+    services
+
+} = Astro.props
+
+const description = marked.parse( data.description )
+const title = marked.parse( data.title )
+
+---
+<Container>
+    <section class="py-8 md:py-40 space-y-4 md:space-y-20">
+        <section class="md:max-w-3xl 2xl:max-w-4xl mx-auto space-y-4 md:space-y-6">
+            <section set:html={ title } class="markdown orangeh2 h2 text-center" />
+            <section set:html={ description } class="markdown text-center leading-loose space-y-4" />
+            <div class="flex justify-center">
+                <Link href={ data.button_one_link } aria_label={ data.button_one_text }>
+                    <ArrowButton>{ data.button_one_text }</ArrowButton>
+                </Link>
+            </div>
+        </section>
+        <Services
+            CDN={ CDN }
+            data={ services }
+            PROJECT={ PROJECT }
+        />
+    </section>
+</Container>

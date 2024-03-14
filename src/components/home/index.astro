@@ -1,0 +1,56 @@
+---
+
+// IMPORTS ASTRO COMPONENTS
+import CaseStudies from "@/components/home/case-studies/index.astro"
+import ContactUs from "@/components/home/contact/index.astro"
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+import HeaderBanner from "@/components/common/header-banner/index.astro"
+import Hero from "@/components/home/hero/index.astro"
+import KeyServices from "@/components/home/key-services/index.astro"
+
+const {
+
+    case_studies,
+    CDN,
+    ENVIRONMENT,
+    home_data,
+    PROJECT,
+    services
+
+} = Astro.props
+
+---
+<HeaderBanner
+    ENVIRONMENT={ ENVIRONMENT }
+/>
+<Header />
+<Hero
+    award_winning={ home_data.award_winning }
+    CDN={ CDN }
+    data={ home_data.hero }
+    PROJECT={ PROJECT }
+    trusted_companies={ home_data.trusted_companies }
+/>
+<KeyServices
+    CDN={ CDN }
+    data={ home_data.key_services }
+    PROJECT={ PROJECT }
+    services={ services }
+/>
+<CaseStudies
+    case_studies={ case_studies }
+    CDN={ CDN }
+    data={ home_data.case_studies }
+    PROJECT={ PROJECT }
+/>
+<ContactUs
+    book_a_conversation={ home_data.book_a_conversation }
+    call_description_one={ home_data.call_description_one }
+    call_description_three={ home_data.call_description_three }
+    call_description_two={ home_data.call_description_two }
+    CDN={ CDN }
+    contact_us={ home_data.contact_us }
+    PROJECT={ PROJECT }
+/>
+<Footer />

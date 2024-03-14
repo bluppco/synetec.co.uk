@@ -1,0 +1,67 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/links/target-blank/index.astro"
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+
+// GET ASTRO PROPS
+const { footer_column_one } = Astro.props
+
+---
+<section class="space-y-4">
+    <div class="size-16 md:size-24">
+        <PictureInternalContain
+            alternative_text={ footer_column_one[0].data.image_alternative_text }
+            source={ footer_column_one[0].data.image_source }
+        />
+    </div>
+    <div class="space-y-1">
+        {
+
+            footer_column_one.slice(1,5).map( ( value ) => {
+
+                return(
+                    <p class="text-synetec_slate text-lg md:text-2xl font-poppins font-medium">{ value.data.title }</p>
+                )
+
+            })
+
+        }
+    </div>
+    <div class="pt-4">
+        <Link href={ footer_column_one[5].data.link } aria_label={ footer_column_one[5].data.title }>
+            <span class="text-white text-xl font-poppins font-medium">{ footer_column_one[5].data.title }</span>
+        </Link>
+    </div>
+    <div class="flex items-center gap-2">
+        <Link href={ footer_column_one[6].data.link } aria_label={ footer_column_one[6].data.title }>
+            <span class="text-synetec_dark_gray hover:text-white text-lg font-poppins font-medium">{ footer_column_one[6].data.title }</span>
+        </Link>
+        <div class="size-4">
+            <PictureInternalContain
+                alternative_text={ footer_column_one[6].data.image_alternative_text }
+                source={ footer_column_one[6].data.image_source }
+            />
+        </div>
+    </div>
+    <div class="flex items-center gap-6">
+        {
+
+            footer_column_one.slice(7,9).map( ( value, index ) => {
+
+                return(
+                    <Link href={ value.data.link } aria_label={ value.data.title }>
+                        <div class={` ${ index === 0 ? "size-6" : "size-8" } `}>
+                            <PictureInternalContain
+                                alternative_text={ value.data.image_alternative_text }
+                                source={ value.data.image_source }
+                            />
+                        </div>
+                    </Link>
+                )
+
+            })
+
+        }
+    </div>
+</section>

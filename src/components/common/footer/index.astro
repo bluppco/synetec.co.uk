@@ -1,0 +1,45 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Copyright from "@/atoms/footer/copyright/index.astro"
+import FooterColumnOne from "@/components/common/footer/column-one/index.astro"
+import FooterColumnTwo from "@/components/common/footer/column-two/index.astro"
+
+// IMPORTS ASTRO COLLECTION
+import { getCollection } from 'astro:content'
+
+// IMPORTS FOOTER ONE COLLECTION
+let footer_column_one = await getCollection('footer-column-one')
+footer_column_one = footer_column_one.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER TWO COLLECTION
+let footer_column_two = await getCollection('footer-column-two')
+footer_column_two = footer_column_two.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER HEADINGS
+import { frontmatter as Awards } from "@/content/footer-headings/awards.md"
+import { frontmatter as Clutch } from "@/content/footer-headings/clutch.md"
+
+---
+<footer class="bg-synetec_black py-12 md:py-24">
+    <Container>
+        <section class="grid md:grid-cols-6 gap-10">
+            <section class="md:col-span-2">
+                <FooterColumnOne
+                    footer_column_one={ footer_column_one }
+                />
+            </section>
+            <section class="md:col-span-4">
+                <FooterColumnTwo
+                    footer_column_two={ footer_column_two }
+                    heading_award={ Awards.title }
+                    heading_clutch={ Clutch.title }
+                />
+            </section>
+        </section>
+        <Copyright />
+    </Container>
+</footer>

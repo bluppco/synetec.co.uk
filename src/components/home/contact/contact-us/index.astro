@@ -1,0 +1,20 @@
+---
+
+// IMPORTS JSX COMPONENTS
+import ContactForm from "@/components/home/contact/contact-us/form/index.jsx"
+
+// IMPORTS ASTRO ATOMS
+import ParagraphSmallDarkBlue from "@/atoms/paragraphs/small/dark-blue/index.astro"
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section class="pt-4">
+    <h3 class="text-synetec_dark_blue text-2xl font-poppins font-semibold">{ data.title }</h3>
+    <ContactForm
+        client:only
+    />
+    <ParagraphSmallDarkBlue>{ data.description }</ParagraphSmallDarkBlue>
+    <div class="h-[1px] bg-synetec_light_gray mt-10" />
+</section>
