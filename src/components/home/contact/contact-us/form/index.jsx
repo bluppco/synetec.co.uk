@@ -144,11 +144,16 @@ const ContactForm = ( props ) => {
                         value={ state.name }
                     />
                 </div>
-                <Turnstile
-                    className="w-full bg-zinc-200 rounded hidden"
-                    onSuccess={ ( token ) => updateTurnstileToken( token ) }
-                    siteKey="0x4AAAAAAAOfA3BnLZ8S-_Kf"
-                />
+                {
+
+                    false &&
+                    <Turnstile
+                        className="w-full bg-zinc-200 rounded hidden"
+                        onSuccess={ ( token ) => updateTurnstileToken( token ) }
+                        siteKey="0x4AAAAAAAOfA3BnLZ8S-_Kf"
+                    />
+
+                }
                 <div className="pt-1 md:pt-2">
                     {
 
