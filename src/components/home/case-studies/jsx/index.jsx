@@ -32,7 +32,7 @@ const CaseStudies = ( props ) => {
         <section className="relative h-full w-full">
             <section className="py-12 md:py-40 bg-cover bg-no-repeat overflow-hidden" style={{ backgroundImage: `url(${ CDN + PROJECT + "/" + data.cover + "?quality=80" })` }}>
                 <Container>
-                    <Carousel showThumbs={ false } showStatus={ false } showArrows={ true } autoPlay={ true } infiniteLoop={ true } showIndicators={ false }
+                    <Carousel showThumbs={ false } showStatus={ false } showArrows={ true } autoPlay={ true } infiniteLoop={ true } showIndicators={ false } preventMovementUntilSwipeScrollTolerance={ true } swipeScrollTolerance={ 50 }
                         renderArrowPrev={( onClickHandler, hasPrev, label ) =>
                             hasPrev && (
                                     <button
