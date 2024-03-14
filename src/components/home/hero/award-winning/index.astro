@@ -19,13 +19,13 @@ const images = data.images.sort( ( a, b ) => a.order - b.order )
 ---
 <section class="space-y-6">
     <HeadingSix>{ data.title }</HeadingSix>
-    <div class="flex flex-wrap md:flex-nowrap md:items-center gap-4 md:gap-0">
+    <div class="grid grid-cols-2 md:flex md:items-center gap-4 md:gap-0">
         {
 
             images.map( ( value ) => {
 
                 return(
-                    <div class="h-20 w-32">
+                    <div class="h-16 md:h-20 w-28 md:w-32">
                         <PictureContain
                             alternative_text={ data.title }
                             CDN={ CDN }
